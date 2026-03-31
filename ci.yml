@@ -1,0 +1,17 @@
+name: Integracion Continua
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  revisar-codigo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Prueba de éxito
+        run: echo "¡GitHub Actions está funcionando perfectamente para la Evaluación 1!"
